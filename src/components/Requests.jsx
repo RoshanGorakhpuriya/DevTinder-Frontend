@@ -45,6 +45,7 @@ const Requests = () => {
     <h1 className="text-bold text-white text-3xl">Requests</h1>
 
         {requests.map((request) => {
+          if(!request.fromUserId) return null;
             const { _id , firstName , lastName , photoUrl , age , gender , about} = request.fromUserId;
 
 
